@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    background-color:darkslateblue;
+    color:white;
+    justify-content: space-between;
+
+}
+#menu{
+    display: flex;
+    align-items: center;
+}
+#menu li{
+    padding-left: 50px;
+    list-style: none;
+}
+
+#link{
+    display: flex;
+    align-items: center;
+    padding:0;
+
+}
+#link li{
+    padding-right: 30px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:white
+}
+#menu li :hover{
+   background-color: #d49466;
+   border-radius: 4px;
+}
+.navbar__toogleBtn{
+    display: none;
+    position: absolute;
+    right:32px;
+    font-size: 24px;
+    color: #d49466;
+    margin-top: 15px;
+}
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        padding:8px 24px;
+        align-items: flex-start;
+    }
+
+    #menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding:0;
+    }
+
+    #menu li{
+        padding:0;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #link{
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #link li{
+        margin:0;
+        padding:0;
+    }
+
+    .navbar__toogleBtn{
+        display: block;
+    }
+
+    #menu.active,
+    #link.active {
+         display: flex;
+}
+}
